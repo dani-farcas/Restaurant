@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navigation ein/aublend -->
+    <header>
+      <nav>
+        <button id="toggle-button">&#9776</button>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="#speisekarte">Speisekarte</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="reservierung">Reservierung</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!------------------------- Inhalt ------------------------------>
+    <main>
+      <section id="startseite">
+        <h1>La Dolce Vita</h1>
+       
+      <img src="./assets/restaurant.jpg" alt="" srcset="" />
+       <p>
+        Wilkommen im La Dolce Vita, Ihrem autehntischen italienischen
+        Restaurant. Genießen Sie hausgemachte Pasta, friche Meeestrüchte und
+        traditionelle Desserts in gemütlicher Atmosphäre. Wir freuen uns auf
+        Ihrem Besuch
+      </p>
+      </section>
+      
+
+      <section id="speisekarte">
+      <h2>Unsere Speisekarte</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Gericht</th>
+            <th>Beschreibunt</th>
+            <th>Preis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spaghetti Carbonara</td>
+            <td>Klassische Carbonara mit Guanciale, Ei, Pecorino Romano und schwarzem Pfeffer.</td>
+            <td>12.50€</td>
+          </tr>
+          <tr>
+            <td>Pizza Margherita</td>
+            <td>Einfache, aber köstliche Pizza mit Tomatensauce, Mozzarella und frischem Basilikum.</td>
+            <td>9.00€</td>
+          </tr>
+          <tr>
+            <td>Risotto ai Funghi</td>
+            <td>Cremiges Risotto mit verschiedenen Waldpilzen, Parmesan und einem Huch Trüffelöl.</td>
+            <td>15.00€</td>
+          </tr>
+          <tr>
+            <td>Tiramisu</td>
+            <td>Klassisches italienisches Dessert mit Kaffee getränkten Löffelbiskuits, Mascarpone-creme und Kakao.</td>
+            <td>7.50€</td>
+          </tr>
+          <tr>
+            <td>Panna Cotta</td>
+            <td>Gekochte Sahne mit Vanille und verschiedenen saisonalen Früchten.</td>
+            <td>8.00€</td>
+          </tr>
+        </tbody>
+      </table> 
+    </section>
+      <!--------------------------------- UBER UNS -------------------------------------->
+      <section id="ueber-uns">
+        <h2>Über uns</h2>
+        <ol>
+            <li>Gegründet im Jahr 1985 von Famillie Rossi.</li>
+            <li>Auszeichnungen für beste italienischen Küche in der Region.</li>
+            <li>Verwendung von frischen, regionalen Zutaten.</li>
+        </ol>
+      </section>
+<!---------------------------------- REZERVIERUNG -------------------------------------->
+      <section id="reservierung">
+        <h1>Reservierung</h1>
+        <form > 
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" aria-required="true" placeholder="Muster Mann">
+            
+            <label for="E-Mail">E-Mail:</label>
+            <input type="text" name="E-Mail" id="email" aria-required="true" placeholder="example@email.em">
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="number" aria-required="true"placeholder="0123 456 789">
+
+            <label for="datum">Datum:</label>
+            <input type="date">
+
+            <label for="unrzeit">Uhrzeit:</label>
+            <input type="time">
+
+            <label for="anzahlung-personen">Anzahlung der Personen:</label>
+            <select name="anzahlung-personen" id="anzahlung-personen">
+                <option value="--">--</option>
+                <option value="1">1 Person</option>
+                <option value="2">2 Personen</option>
+                <option value="3">3 Personen</option>
+                <option value="4">4 Personen</option>
+                <option value="5">5 Personen</option>
+                <option value="6">6 Personen</option>
+            </select>
+            <button type="submit">Reservierung absenden</button>
+        </form>
+      </section>
+    </main>
+
+    <!----------------------------------- Fußzeile ------------------------------>
+    <footer>
+        <p>&copy;2023La Dolce Vita</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
