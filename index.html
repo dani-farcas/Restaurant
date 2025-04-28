@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
+    <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
     <!-- Navigation ein/aublend -->
     <header>
+      <div id="logo">
+          <img src="./assets/logo.png-1.png" alt="logo">
+        </div>
       <nav>
-        <button id="toggle-button">&#9776</button>
+        
+        <button type="button" id="toggle-button">&#9776</button>
+        
         <ul>
           <li><a href="index.html">Startseite</a></li>
           <li><a href="#speisekarte">Speisekarte</a></li>
@@ -33,8 +39,8 @@
         Ihrem Besuch
       </p>
       </section>
-      
 
+      <!----------------------------------- SPEIZEKARTE --------------------------------->
       <section id="speisekarte">
       <h2>Unsere Speisekarte</h2>
       <table>
@@ -85,7 +91,7 @@
       </section>
 <!---------------------------------- REZERVIERUNG -------------------------------------->
       <section id="reservierung">
-        <h1>Reservierung</h1>
+        <h1>Reservierung:</h1>
         <form > 
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" aria-required="true" placeholder="Muster Mann">
@@ -94,7 +100,7 @@
             <input type="text" name="E-Mail" id="email" aria-required="true" placeholder="example@email.em">
 
             <label for="phone">Telefonnummer:</label>
-            <input type="number" aria-required="true"placeholder="0123 456 789">
+            <input type="tel" aria-required="true"placeholder="0123 456 789">
 
             <label for="datum">Datum:</label>
             <input type="date">
@@ -112,7 +118,7 @@
                 <option value="5">5 Personen</option>
                 <option value="6">6 Personen</option>
             </select>
-            <button type="submit">Reservierung absenden</button>
+            <button type="submit" id="btn">Reservierung absenden</button>
         </form>
       </section>
     </main>
