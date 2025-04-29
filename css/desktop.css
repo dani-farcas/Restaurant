@@ -24,8 +24,8 @@ h2 {
 
 /* ------------------------------- LOGO ---------------------------------*/
 #logo img {
-  width: 5.5rem;
-  padding-top: 1rem;
+  width: 7rem;
+  padding: 1rem 3rem;
   cursor: pointer;
 }
 
@@ -54,10 +54,11 @@ nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
   align-items: center;
+  font-size: large;
 }
 
 nav ul li a {
@@ -158,6 +159,10 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+input, label, select{
+  font-size: large;
+  padding: 1rem;
 }
 #reservierung h1 {
   color: white;
