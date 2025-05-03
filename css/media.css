@@ -1,105 +1,102 @@
-/*------------------------ iPAD -------------------------*/
-@media screen and (min-width: 769px) {
-  #toggle-button {
-    display: none;
+/* ==== Mobile Styles ==== */
+@media (max-width: 900px) {
+    #toggle-button {
+      display: block;
+      color: #023462;
+      z-index: 1100;
+    }
+    #toggle-button.active {
+      color: #e7422d;
+      font-weight: bolder;
+    }
+  }
+  
+    @media (max-width: 900px) {
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* <- centrează toate li-urile */
+        justify-content: center;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(1, 48, 94, 0.8);
+        width: 100vw;
+        height: 30vh;
+        margin: 0;
+        list-style: none;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+    
+      nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    
+      nav ul li a {
+        display: inline-block; /* sau block */
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-weight: 900;
+        text-decoration: none;
+      }
+    
+    nav ul.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  nav {
-    display: block;
-  }
 
-  #ueber-uns h2 {
-    color: white;
+ 
+  /* Responsive */
+
+
+  @media (max-width: 900px) {
+    .about-section {
+      height: auto;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-image {
+      margin: 1rem 0;
+    }
+  
+    .about-image img {
+      display: block; /* elimină spațiile nedorite inline */
+    }
+    
+ 
+  
+    .about-text p {
+      font-size: 1rem;
+    }
   }
-  #reservierung {
-    width: 100%;
-    margin: 2rem;
+  
+
+  /* Media Queries pentru dispozitive mobile și tabletă */
+@media (max-width: 900px) {
+  .services-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 carduri pe rând pe tabletă */
   }
 }
-/*-------------------------------- MOBILE ---------------------------------*/
-@media screen and (max-width: 768px) {
-  #logo img {
-    margin: 0;
-    padding: 0;
-    width: 5.5rem;
-  }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    position: relative;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 54vh;
-    padding: 2rem 0;
-    gap: 5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    background-color: rgba(57, 55, 55, 0.9);
-    z-index: 1000;
-    transform: translateY(-100%);
-  }
-
-  nav ul.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  #toggle-button.active {
-    transform: rotate(90deg);
-  }
-
-  #toggle-button {
-    display: inline-block;
-    background: none;
-    font-size: 2rem;
-    border: none;
-    color: white;
-    transition: transform 0.3s ease;
-    z-index: 2000;
-  }
-
-  #startseite img {
-    width: 100%;
-  }
-  #startseite p {
-    width: 100%;
-    margin: 0;
-    padding: 2rem 0rem;
-    line-height: 2rem;
+@media (max-width: 600px) {
+  .services-section {
+    grid-template-columns: 1fr; /* 1 card pe rând pe mobil */
     text-align: center;
-  }
-
-  #speisekarte h2 {
-    padding: 0;
-  }
- table {
-    font-size: medium;
-  }
-
-  #ueber-uns {
-    font-size: medium;
-    margin-bottom: 3rem;
-  }
-
-  #ueber-uns h2 {
-    color: white;
-  }
-
-  #reservierung {
-    border-radius: 0;
-   min-width: 100%;
-    margin: 2rem;
+    margin: 0;
+    padding: 2rem 0;
+    row-gap: 2rem;
   }
 }

@@ -3,95 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant</title>
+    <title>Evoqon GmbH</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/desktop.css" />
     <link rel="stylesheet" href="css/media.css">
   </head>
   <body>
     <!-- Navigation ein/aublend -->
+     <section class="pg-1">
     <header>
       <div id="logo">
-          <img src="./assets/logo.png-1.png" alt="logo">
+          <img src="assets/logo E_prev_ui.png" alt="logo">
+         <a href="index.html"> <h2 class="logo-name">EVOQON GmbH</h2></a>
         </div>
-      <nav>
-        
-        <button type="button" id="toggle-button">&#9776</button>
-        
+      <nav> 
+        <button type="button" id="toggle-button">&#9776</button>      
         <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="#speisekarte">Speisekarte</a></li>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#reservierung">Reservierung</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#ueber-uns">Über Uns</a></li>
+          <li><a href="#leistungen">Unsere Leistungen</a></li>
+          <li><a href="#reservierung">Portofolio</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <!------------------------- Inhalt ------------------------------>
-    <main>
-      <section id="startseite">
-        <h1>La Dolce Vita</h1>
-       
-      <img src="./assets/restaurant.jpg" alt="" srcset="" />
-       <p>
-        Wilkommen im La Dolce Vita, Ihrem autehntischen italienischen
-        Restaurant. <br><br>Genießen Sie hausgemachte Pasta, friche Meeestrüchte und
-        traditionelle Desserts in gemütlicher Atmosphäre. Wir freuen uns auf
-        Ihrem Besuch!
-      </p>
-      </section>
+    <!------------------------- HERO ------------------------------>
+    <div class="hero">
+      <img src="assets/hero-pic.jpeg" alt="hero image">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h2>Ihr Partner für hochwertige Altbausanierung und moderne Bauprojekte.</h2>
+        <a href="#kontakt" class="hero-button">Jetzt Angebot anfordern</a>
+      </div>
+    </div>
 
-      <!----------------------------------- SPEIZEKARTE --------------------------------->
-      <section id="speisekarte">
-      <h2>Unsere Speisekarte</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Gericht</th>
-            <th>Beschreibunt</th>
-            <th>Preis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spaghetti Carbonara</td>
-            <td>Klassische Carbonara mit Guanciale, Ei, Pecorino Romano und schwarzem Pfeffer.</td>
-            <td>12.50€</td>
-          </tr>
-          <tr>
-            <td>Pizza Margherita</td>
-            <td>Einfache, aber köstliche Pizza mit Tomatensauce, Mozzarella und frischem Basilikum.</td>
-            <td>9.00€</td>
-          </tr>
-          <tr>
-            <td>Risotto ai Funghi</td>
-            <td>Cremiges Risotto mit verschiedenen Waldpilzen, Parmesan und einem Huch Trüffelöl.</td>
-            <td>15.00€</td>
-          </tr>
-          <tr>
-            <td>Tiramisu</td>
-            <td>Klassisches italienisches Dessert mit Kaffee getränkten Löffelbiskuits, Mascarpone-creme und Kakao.</td>
-            <td>7.50€</td>
-          </tr>
-          <tr>
-            <td>Panna Cotta</td>
-            <td>Gekochte Sahne mit Vanille und verschiedenen saisonalen Früchten.</td>
-            <td>8.00€</td>
-          </tr>
-        </tbody>
-      </table> 
+    <!-- Sectiunea Über Uns -->
+    <section class="about-section" id="about">
+      <div class="about-container" data-aos="fade-up">
+        <div class="about-image">
+          <img src="assets/andreas.jpg" alt="Unser Team">
+        </div>
+        <div class="about-text">
+          <h2>Über uns</h2>
+          <p>
+            Wir sind ein leidenschaftliches und erfahrenes Team, das sich auf die umfassende Sanierung von Altbauten spezialisiert hat. 
+            Seit über 10 Jahren bringen wir frischen Wind in alte Wände – mit modernen Lösungen, zuverlässiger Handwerkskunst und einem Auge fürs Detail.
+            <br><br>
+            Unser Ziel ist es, historische Gebäude nicht nur zu erhalten, sondern sie mit neuem Leben zu füllen. 
+            Dabei stehen Qualität, Ehrlichkeit und die Zufriedenheit unserer Kunden im Mittelpunkt unseres Handelns.
+            <br><br>
+            Ob Fassade, Dach, Innenausbau oder moderne Technologien wie Fußbodenheizung – bei uns bekommen Sie alles aus einer Hand.
+          </p>
+        </div>
+      </div>
     </section>
+
+    <!-- sectiunea Cards -->
+    <section class="services-section">
+      <div class="card" data-aos="fade-up">
+        <img src="assets/fazada veche.jpg" alt="Außensanierung" />
+        <h3>Außensanierung</h3>
+        <p>Komplette Außensanierung aus einer Hand.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <img src="assets/baia2.jpg" alt="Innensanierung" />
+        <h3>Innensanierung</h3>
+        <p>Komplette Innensanierung aus einer Hand.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <img src="assets/fhb.jpg" alt="Fußbodenheizung" />
+        <h3>Fußbodenheizung</h3>
+        <p>Wärmeverteilung für maximalen Komfort in jedem Raum.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <img src="assets/acoperis.jpg" alt="Dacharbeiten" />
+        <h3>Dacharbeiten</h3>
+        <p>Professionelle Dachreparaturen und Neueindeckungen.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <img src="assets/schela.jpg" alt="Gerüstbau" />
+        <h3>Gerüstbau</h3>
+        <p>Sicher und effizient für jede Baustelle.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <img src="assets/acoperis.jpg" alt="Dacharbeiten" />
+        <h3>Dacharbeiten</h3>
+        <p>Professionelle Dachreparaturen und Neueindeckungen.</p>
+      </div>
+    </section>
+    
+    <!-- Separator -->
+    <div class="separator"></div>
+    
+
+</div>
+
+  
+  </section>
+    
       <!--------------------------------- UBER UNS -------------------------------------->
       <section id="ueber-uns">
         <h2>Über uns</h2>
-        <ol>
-            <li>Gegründet im Jahr 1985 von Famillie Rossi.</li>
-            <li>Auszeichnungen für beste italienischen Küche in der Region.</li>
-            <li>Verwendung von frischen, regionalen Zutaten.</li>
-        </ol>
+        
       </section>
 <!---------------------------------- REZERVIERUNG -------------------------------------->
-      <section id="reservierung">
-        <h1>Reservierung:</h1>
+      <section id="angebot-anfordern">
+        <h1>Angebot anfordern:</h1>
         <form > 
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" aria-required="true" placeholder="Muster Mann">
@@ -108,26 +126,21 @@
             <label for="unrzeit">Uhrzeit:</label>
             <input type="time">
 
-            <label for="anzahlung-personen">Anzahlung der Personen:</label>
-            <select name="anzahlung-personen" id="anzahlung-personen">
-                <option value="--">--</option>
-                <option value="1">1 Person</option>
-                <option value="2">2 Personen</option>
-                <option value="3">3 Personen</option>
-                <option value="4">4 Personen</option>
-                <option value="5">5 Personen</option>
-                <option value="6">6 Personen</option>
-            </select>
+            
             <button type="submit" id="btn">Reservierung absenden</button>
         </form>
       </section>
-    </main>
+    
 
     <!----------------------------------- Fußzeile ------------------------------>
     <footer>
-        <p>&copy;2023La Dolce Vita</p>
+        <p>&copy;2025 Evoqon GmbH</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <script src="./script.js"></script>
   </body>
 </html>

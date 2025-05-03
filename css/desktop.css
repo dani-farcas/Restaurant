@@ -1,240 +1,299 @@
+html{
+  scroll-behavior: smooth;
+}
+:root{
+  --primary-color: #e7422d;
+  --secondary-color: #023462;
+  --background-color: rgba(1, 48, 94, 0.5);
+  --text-color: #ffffff;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   border: 0;
 }
 
-/* ------------------- HEADER ----------------------*/
+/* ==== General Header ==== */
 header {
-  background-color: red;
-  height: 5rem;
+  height: 5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
+  background-color: rgba(253, 252, 252, 0.5);
   z-index: 1000;
 }
 
-h1,
-h2 {
-  color: red;
-}
-
-/* ------------------------------- LOGO ---------------------------------*/
-#logo img {
-  width: 7rem;
-  padding: 1rem 3rem;
-  cursor: pointer;
-}
-
-nav {
+#logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#toggle-button {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
+  color: var(--primary-color);
   cursor: pointer;
-  color: white;
-  transition: transform 0.3s ease;
-  z-index: 10;
-}
-#toggle.button.active {
-  color: white;
 }
 
-nav ul {
+#logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+ .logo-name{
+  color: var(--secondary-color);
+  font-size: large;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 5px;
+ }
+ .logo-name:hover{
+  color: var(--secondary-color);
+  transform: scale(1.05);
+ }
+
+/* ==== Navigation ==== */
+nav ul, #logo a {
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
   gap: 2rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center;
-  font-size: large;
 }
 
-nav ul li a {
+nav ul li a, #logo a {
+  color: var(--secondary-color);
   text-decoration: none;
-  color: white;
+  font-weight: 200;
+  font-size: medium;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: whitesmoke;
-  text-decoration: underline;
+  color: var(--primary-color); /* accent color */
+  transform: scale(1.05);
 }
 
-/*--------------------- MAIN --------------------------------*/
-main {
-  width: 80%;
+/* ==== Toggle Button for Mobile ==== */
+#toggle-button {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+
+/*----------------- HERO-CONTENT ----------------------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--text-color);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-/*--------------------- START SEITE ------------------------*/
-#startseite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 4rem;
+  flex-direction: column; /* Centrează elementele pe verticală */
+  align-items: center; /* Centrează pe orizontală */
+  justify-content: center; /* Centrează pe verticală */
+  text-align: center; /* Aliniază textul la centru */
 }
 
-#startseite img{
-  width: 65%;
-}
-#startseite p {
-  width: 80%;
-  padding: 2rem 5rem;
-  line-height: 3rem;
-  font-size: x-large;
-}
-
-#startseite h1 {
-  margin-top: 3rem;
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 5rem;
   letter-spacing: 0.2rem;
 }
 
-/* ------------------------ SPEISEKARTE --------------------------*/
-#speisekarte h2 {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-  padding-bottom: 0.5rem;
-}
 
-/*-------------------------------- TABLE ----------------------------*/
-table {
-  width: 80%;
-  margin: 0 auto;
-  border-collapse: collapse;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.7);
-  margin-bottom: 5rem;
-  font-size: x-large;
-}
-
-thead th {
-  background-color: green;
-  font-size: large;
-  color: white;
-  height: 4rem;
-}
-
-tbody td {
-  padding: 1rem;
-}
-
-tbody tr:nth-child(even) {
-  background-color: gainsboro;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-td:nth-child(3),
-td:nth-child(1) {
+.hero-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   font-weight: bold;
-  text-align: center;
-}
-
-/* ---------------------------- UBER UNS ------------------*/
-#ueber-uns {
-  background-color: green;
-  width: 75%;
-  font-size: x-large;
-  margin-bottom: 4rem;
-  text-align: left;
-  padding: 2rem 2rem;
-  border-radius: 8px;
-}
-#ueber-uns ol li {
-  padding-bottom: 1rem;
-  font-style: italic;
-  color: white;
-}
-
-/*------------------------------- RESERVIERUNG ------------------------------*/
-#reservierung {
-  max-width: 50%; 
- 
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: hsl(0, 0%, 6%, 0.5);
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
-
-#reservierung h1 {
-  text-decoration: underline;
-  margin-bottom: 1rem;
-  color: white;
-}
-
-form {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-label {
-  margin-top: 1rem;
-  color: white;
-  font-weight: 400;
-  width: 100%;
-  text-align: left;
-}
-
-input,
-select {
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-top: 0.3rem;
-  margin-bottom: 0.5rem;
-  border: none;
-}
-
-#btn {
-  margin: 5rem 0 5rem 0;
-  background-color: #4caf50;
-  color: white;
-  padding: 1rem;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-#btn:hover {
-  background-color: #45a049;
+.hero-button:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
 }
 
-/* ------Footer ---------*/
-footer {
-  background-color: green;
-  font-size: small;
-  height: 3rem;
-  color: white;
-  text-align: center;
+
+.about-section {
+  height: 60vh;
+  width: 100%;
+  margin: 0rem 0;
+  background-image: url("../assets/schela.jpg"); /* înlocuiește cu calea ta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 0.1rem;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* poate fi și negru cu 0.5 */
+  z-index: 0;
 }
 
+.about-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 2rem;
+
+}
+
+.about-image {
+  flex: 0 0 250px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+  flex: 1 1;
+  text-align: justify;
+}
+
+.about-text h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 carduri pe rând */
+  padding: 5rem;
+  row-gap: 5rem;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 250px; /* Lățimea fixă a cardului */
+  height: 350px; /* Înălțimea fixă a cardului */
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.card img {
+  width: 100%; /* Imagina va ocupa toată lățimea cardului */
+  height: 200px; /* Înălțimea fixă pentru imagine */
+  object-fit: cover; /* Asigură că imaginea va umple zona fără a se deforma */
+  margin-bottom: 1rem;
+}
+
+.card h3{
+  color: var(--primary-color);
+}
+.card p{
+  color: var(--secondary-color);
+}
+
+.card h3,
+.card p {
+  margin: 0;
+  padding: 0.25rem 0;
+  font-size: 1rem;
+}
+
+.services-section .card:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+
+/* Animație AOS */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="fade-up"][data-aos-delay="100"] {
+  transition-delay: 0.1s;
+}
+
+[data-aos="fade-up"][data-aos-delay="200"] {
+  transition-delay: 0.2s;
+}
